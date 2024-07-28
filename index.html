@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official//CTFiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Download Files</h1>
+    <button class="button" onclick="downloadFile('file2.zip')">Download File 2</button>
+    <button class="button" onclick="downloadFile('file3.zip')">Download File 3</button>
+    <button class="button" onclick="navigateToPage('CVSC_Page.html')">VS Code</button>
+    <button class="button" onclick="navigateToPage('Links.html')">Links</button>
+    <button class="button" onclick="navigateToPage('Guide.html')">Guide</button>
+    <button class="button" onclick="navigateToPage('contact.html')">Suggestion</button>
+
+    <script>
+        function downloadFile(fileName) {
+            const link = document.createElement('a');
+            link.href = fileName;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

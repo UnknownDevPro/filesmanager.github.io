@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Credits: Made by Mau. Tools used: Visual Studio, Github, Chatgpt (Server Support), Live Server VSC Plugin (Testing Porpouses)</p>
+    <button class="button" onclick="navigateToPage('index.html')">Back</button>
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

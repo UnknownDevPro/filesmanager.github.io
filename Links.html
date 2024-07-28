@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official//CTFiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Navigate to Another Site</h1>
+    <button class="button" onclick="navigateToSite('https://www.facebook.com/cultivartmx')">Facebook</button>
+    <button class="button" onclick="navigateToSite('https://www.instagram.com/cultivartmx/')">Instagram</button>
+    <button class="button" onclick="navigateToSite('https://wa.me/message/MT5YITTO2ZAHB1')">Whatsapp</button>
+    <button class="button" onclick="navigateToSite('https://cultivart.mx/')">Cultivart</button>
+    <button class="button" onclick="navigateToPage('index.html')">Back</button>
+    <button class="button" onclick="navigateToPage('Credits.html')">Credits</button>
+
+    <script>
+        function navigateToSite(url) {
+            window.location.href = url;
+        }
+    </script>
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
