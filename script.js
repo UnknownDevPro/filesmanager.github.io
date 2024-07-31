@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // Hardcoded credentials (for demonstration purposes)
     const validUsername = 'admin';
-    const validPassword = 'password123';
+    const validPassword = 'CTFA2020@';
 
     // Validate credentials
     if (username === validUsername && password === validPassword) {
