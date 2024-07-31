@@ -32,7 +32,7 @@
     <button class="button" onclick="downloadFile('Soon.txt')">Comming Soon</button>
     <button class="button" onclick="navigateToPage('Soon.txt')">Comming Soon</button>
     <button class="button" onclick="navigateToPage('Soon.txt')">Comming Soon</button>
-    <button class="button" onclick="navigateToPage('Soon.txt')">Comming Soon</button>
+    <button class="button download" onclick="downloadRepo()">Backup</button>
     <button class="button" onclick="navigateToPage('Log_Out.html')">Log Out</button>
 
     <script>
@@ -44,6 +44,25 @@
             link.click();
             document.body.removeChild(link);
         }
+        function downloadRepo() {
+            // URL of the GitHub repository zip
+            const repoUrl = 'https://github.com/UnknownDevPro/UnknownDevPro.github.io/archive/refs/heads/main.zip';
+
+            // Create an invisible anchor element
+            const a = document.createElement('a');
+            a.href = repoUrl;
+            a.download = 'repository.zip'; // Optional: specify the default filename
+
+            // Append the anchor to the body
+            document.body.appendChild(a);
+
+            // Trigger a click on the anchor to start the download
+            a.click();
+
+            // Remove the anchor from the document
+            document.body.removeChild(a);
+        }
+
     </script>
     <script>
         function navigateToPage(page) {
