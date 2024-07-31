@@ -3,23 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Owner Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 15px 25px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button.shutdown {
+            background-color: #e74c3c;
+        }
+        .button.restart {
+            background-color: #f39c12;
+        }
+        .button.backup {
+            background-color: aqua;
+        }
+        .button.update {
+            background-color: #3498db;
+        }
+        .button.logout {
+            background-color: #2ecc71;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Site Owner Login</h2>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Login</button>
-        </form>
-        <p id="error-message"></p>
+    <div class="container">
+        <h1>Owner Dashboard</h1>
+        <div class="button-group">
+            <button class="button shutdown" onclick="shutdown()">Shutdown</button>
+            <button class="button restart" onclick="restart()">Restart</button>
+            <button class="button update" onclick="updateSystem()">Update System</button>
+            <button class="button logout" onclick="logout()">Logout</button>
+            <button class="button backup" onclick="backupWebsite()">Backup Website</button>
+        </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function shutdown() {
+            if (confirm('Are you sure you want to shutdown?')) {
+                // Implement shutdown logic here
+                alert('System is shutting down...');
+                // e.g., send a request to server to initiate shutdown
+            }
+        }
+
+        function restart() {
+            if (confirm('Are you sure you want to restart?')) {
+                // Implement restart logic here
+                alert('System is restarting...');
+                // e.g., send a request to server to initiate restart
+            }
+        }
+
+        function updateSystem() {
+            if (confirm('Are you sure you want to update the system?')) {
+                // Implement update logic here
+                window.location.href = 'Update.html';
+                // e.g., send a request to server to initiate update
+            }
+        }
+
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                // Implement logout logic here
+        
+                // e.g., redirect to login page or perform logout
+                window.location.href = 'Log_Out.html'; // Adjust URL as necessary
+            }
+        }
+        function backupWebsite() {
+            window.location.href = 'backup.php';
+        }
+    </script>
 </body>
 </html>
