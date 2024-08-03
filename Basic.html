@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Official//CTFiles</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,9 +27,24 @@
     </style>
 </head>
 <body>
-    
-    <p>Credits: Made by Mau. Tools used: Visual Studio, Github, Chatgpt (Server Support), Live Server VSC Plugin (Testing Porpouses)</p>
-    <button class="button" onclick="navigateToPage('index.html')">Back</button>
+    <h1>Download Files</h1>
+    <button class="button" onclick="downloadFile('Soon.txt')">Test Files</button>
+    <button class="button" onclick="navigateToPage('CVSC_Page.html')">VS Code</button>
+    <button class="button" onclick="navigateToPage('Links.html')">Links</button>
+    <button class="button" onclick="navigateToPage('Log_Out.html')">Log Out</button>
+
+    <h1>V5.0.0</h1>
+
+    <script>
+        function downloadFile(fileName) {
+            const link = document.createElement('a');
+            link.href = fileName;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
     <script>
         function navigateToPage(page) {
             window.location.href = page;
