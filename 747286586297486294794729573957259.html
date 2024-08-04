@@ -59,6 +59,9 @@
         .button:hover {
             opacity: 0.8;
         }
+        .button.File {
+            background-color: #5b3ce7;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +70,7 @@
         <div class="button-group">
             <button class="button shutdown" onclick="shutdown()">Shutdown</button>
             <button class="button restart" onclick="restart()">Restart</button>
+            <button class="button File" onclick="navigateToPage('/File_Login/Login.html')">Files</button>
             <button class="button update" onclick="updateSystem()">Update System</button>
             <button class="button" onclick="downloadFile('3030.txt')">Backup Files</button>
             <button class="button download" onclick="downloadRepo()">Backup</button>
@@ -129,6 +133,11 @@
             document.body.removeChild(a);
         }
 
+    </script>
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
     </script>
 </body>
 </html>
